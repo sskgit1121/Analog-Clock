@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    height: 400px;
+    width: 400px;
+    /border: 1px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    border-radius: 50%;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);/*ver hor blur color(red,gree,blu,opa)*/
+}
+.clock{
+    width: 320px;
+    height: 320px;
+    /border: 1px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    /*shadow */
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.5) inset;
+    /*set png*/
+    background: url("./img/Analog.png");
+    background-size: cover;
+    /*Hiii of container is not showing in center so apply properties*/
+    /*apply property on elements*/
+    /*bcz this property elements be on center*/
+    display: flex;
+    justify-content: center;/*at x-axis*/
+    align-items: center;/*at y-axis*/
+}
+.clock::before{/*it is called pseudo class*/
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+
+.hr, .min, .sec{
+/*give some property that shows*/
+/border: 1px solid;
+/*now it shows a hifen*/
+position: absolute;/*take position on one on*/
+
+/*give place to apply contents*/
+display: flex;
+justify-content: center;/*at x-axis*/
+/align-items: center;/*at y-axis*/
+}
+.hr{
+    width: 100px;
+    height: 100px;
+
+}
+.min{
+    width: 150px;
+    height: 150px;
+}
+.sec{
+    width: 200px;
+    height: 200px;
+}
+.hr::before{
+    content: "";
+    height: 50px;
+    width: 5px;
+    background-color: black;
+    position: absolute;
+    border: 1px solid red;
+    z-index: 1;
+    border-radius: 50%;
+}
+.min::before{
+    content: "";
+    height: 75px;
+    width: 4px;
+    background-color: black;
+    position: absolute;
+    border: 1px solid blue;
+    z-index: 2;
+    border-radius: 50%;
+
+}
+.sec::before{
+    content: "";
+    height: 105px;
+    width: 3px;
+    background-color: black;
+    position: absolute;
+    border:1px solid green;
+    z-index: 3;
+    border-radius: 100%;
+}
