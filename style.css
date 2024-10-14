@@ -31,7 +31,7 @@ body{
     /*shadow */
     box-shadow: 10px 10px 30px rgba(0,0,0,0.5) inset;
     /*set png*/
-    background: url("./img/Analog.png");
+    background: url("./Analog.png");
     background-size: cover;
     /*Hiii of container is not showing in center so apply properties*/
     /*apply property on elements*/
